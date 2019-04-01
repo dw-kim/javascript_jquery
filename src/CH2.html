@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,9 +11,26 @@
     <script>
         var cars = ["Saab","Volvo","BMW"];
 
-        document.getElementById("board").innerHTML = cars[0];
+        function innerExample() {
+            document.getElementById("board").innerHTML = cars[0];
+        }
 
-        cars.map((value) => { console.log(value) });
+        function consoleExample() {
+            // arrow function internet Explorer 에러남
+            //cars.map((value) => { console.log(value) });
+        }
+
+        function confirmExample() {
+            let bool = confirm("확인 또는 취소 버튼");
+            document.write(bool);
+              }
+
+        (function promptExample() {
+            let inputTxt = prompt("입력", "");
+            document.write(inputTxt);
+        })();
+
+
 
     </script>
 </body>
